@@ -1,0 +1,302 @@
+
+/* =========================================================
+   FOOTER — RODAPÉ
+   ========================================================= */
+
+.footer {
+    width: 100%;
+    padding: 6rem 1.6rem 3rem;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   GRID PRINCIPAL
+   ========================================================= */
+
+.footer-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.6rem;
+    text-align: center;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.brand-logo {
+    display: inline-block;
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.15rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+    opacity: 0.7;
+}
+
+/* =========================================================
+   COLUNAS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-title {
+    margin: 0 0 1.6rem;
+    color: var(--gray);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.column-list a {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.column-list a:hover {
+    color: var(--purple);
+}
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.footer-divider {
+    width: 100%;
+    height: 0.1rem;
+    margin: 4.8rem 0 2.8rem;
+    border: 0;
+    background-color: var(--border);
+}
+
+/* =========================================================
+   PARTE INFERIOR
+   ========================================================= */
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.copyright {
+    margin: 0;
+    color: var(--gray);
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    color: var(--black);
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 50%;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--white);
+    background-color: var(--purple);
+    transform: translateY(-0.2rem);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+    .footer {
+        padding: 7rem 2.4rem 3.5rem;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem 3rem;
+        text-align: left;
+    }
+
+    .footer-column {
+        align-items: flex-start;
+    }
+
+    .footer-brand {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 8rem 2.4rem 4rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr repeat(4, 1fr);
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .footer-column {
+        align-items: flex-start;
+    }
+
+    .brand-logo {
+        margin-top: -0.3rem;
+    }
+
+    .footer-divider {
+        margin-top: 6rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: flex-end;
+    }
+}
+
+/* =========================================================
+   TELAS GRANDES
+   ========================================================= */
+
+@media (min-width: 1200px) {
+    .footer {
+        padding-top: 9rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .footer-grid {
+        gap: 4rem;
+    }
+
+    .column-list a {
+        font-size: 1.5rem;
+    }
+
+    .footer-divider {
+        margin-top: 7rem;
+    }
+}
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+    .footer {
+        padding: 5rem 1.4rem 2.8rem;
+    }
+
+    .footer-grid {
+        gap: 3rem;
+    }
+
+    .brand-logo {
+        font-size: 2.6rem;
+        letter-spacing: -0.12rem;
+    }
+
+    .column-title {
+        font-size: 1.1rem;
+    }
+
+    .column-list {
+        gap: 1rem;
+    }
+
+    .column-list a {
+        font-size: 1.3rem;
+    }
+
+    .footer-divider {
+        margin: 4rem 0 2.4rem;
+    }
+
+    .footer-bottom {
+        gap: 1.8rem;
+    }
+
+    .copyright {
+        font-size: 1.2rem;
+    }
+
+    .social-links {
+        gap: 1.2rem;
+    }
+
+    .social-links a {
+        width: 3.4rem;
+        height: 3.4rem;
+        font-size: 1.5rem;
+    }
+}
+
