@@ -1,0 +1,278 @@
+
+/* =========================================================
+   SEÇÃO DISCOVER
+   ========================================================= */
+
+.discover {
+    width: 100%;
+    padding: 8rem 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover-container {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8rem;
+    text-align: center;
+}
+
+/* =========================================================
+   IMAGEM
+   ========================================================= */
+
+.discover-image {
+    width: 100%;
+    max-width: 32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.discover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.discover-content {
+    width: 100%;
+    max-width: 62rem;
+}
+
+/* Tag */
+
+.discover-tag {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+}
+
+/* Título */
+
+.discover-title {
+    margin-bottom: 2rem;
+
+    color: var(--black);
+    font-size: clamp(3.4rem, 8vw, 5.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.18rem;
+}
+
+/* Palavra em roxo */
+
+.discover-title .purple-text {
+    color: var(--purple);
+}
+
+/* Palavra destacada */
+
+.discover-title .boxed-text {
+    display: inline-block;
+
+    padding: 0.1rem 0.7rem;
+
+    border: 0.2rem solid var(--pink);
+    border-radius: 0.2rem;
+
+    color: var(--black);
+}
+
+/* Descrição */
+
+.discover-description {
+    width: 100%;
+    max-width: 52rem;
+    margin: 0 auto 2.8rem;
+
+    color: var(--gray);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Link */
+
+.discover-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: var(--black);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease,
+        transform 0.2s ease;
+}
+
+.discover-link:hover {
+    color: var(--purple);
+    gap: 1.2rem;
+}
+
+.discover-link .arrow {
+    font-size: 1.8rem;
+    transition: transform 0.2s ease;
+}
+
+.discover-link:hover .arrow {
+    transform: translateX(0.2rem);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .discover {
+        padding: 9rem 2.4rem;
+    }
+
+    .discover-container {
+        gap: 5.6rem;
+    }
+
+    .discover-image {
+        max-width: 36rem;
+    }
+
+    .discover-tag {
+        font-size: 1.5rem;
+    }
+
+    .discover-description {
+        font-size: 1.7rem;
+    }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .discover {
+        padding: 10rem 2.4rem;
+    }
+
+    .discover-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 7rem;
+        text-align: left;
+    }
+
+    .discover-image {
+        order: 1;
+        flex: 1;
+        max-width: 42rem;
+        justify-content: center;
+    }
+
+    .discover-content {
+        order: 2;
+        flex: 1;
+        max-width: 58rem;
+    }
+
+    .discover-tag {
+        margin-bottom: 1.8rem;
+    }
+
+    .discover-title {
+        font-size: clamp(4.4rem, 5vw, 6rem);
+        letter-spacing: -0.25rem;
+    }
+
+    .discover-description {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+/* =========================================================
+   DESKTOP GRANDE
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .discover {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    .discover-container {
+        gap: 10rem;
+    }
+
+    .discover-image {
+        max-width: 46rem;
+    }
+
+    .discover-title {
+        font-size: 6.2rem;
+    }
+}
+
+/* =========================================================
+   TELAS PEQUENAS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .discover {
+        padding: 6rem 1.4rem;
+    }
+
+    .discover-container {
+        gap: 3.6rem;
+    }
+
+    .discover-image {
+        max-width: 27rem;
+    }
+
+    .discover-tag {
+        font-size: 1.3rem;
+        letter-spacing: 0.14rem;
+    }
+
+    .discover-title {
+        font-size: 3.2rem;
+        letter-spacing: -0.14rem;
+    }
+
+    .discover-description {
+        font-size: 1.5rem;
+    }
+
+    .discover-link {
+        font-size: 1.5rem;
+    }
+}
+
