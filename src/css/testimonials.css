@@ -1,0 +1,472 @@
+
+/* =========================================================
+   SEÇÃO TESTIMONIALS
+   ========================================================= */
+
+.testimonials {
+    width: 100%;
+    padding: 8rem 1.6rem;
+
+    background-color: var(--purple);
+
+    overflow: hidden;
+}
+
+.testimonials-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.testimonials-header {
+    width: 100%;
+    max-width: 68rem;
+
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+
+    text-align: center;
+}
+
+.testimonials-title {
+    margin-bottom: 1.6rem;
+
+    color: var(--white);
+    font-size: clamp(3.4rem, 8vw, 5.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.18rem;
+}
+
+.testimonials-title .purple-highlight {
+    display: block;
+
+    color: var(--pink);
+}
+
+.testimonials-subtitle {
+    max-width: 56rem;
+    margin: 0 auto;
+
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   CARROSSEL
+   ========================================================= */
+
+.testimonials-carousel-wrapper {
+    width: 100%;
+
+    overflow: visible;
+}
+
+.testimonials-cards {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    padding: 3rem 0;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonials-cards::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+   Espaço lateral para permitir que o primeiro
+   e o último card sejam centralizados.
+*/
+
+.testimonials-cards::before,
+.testimonials-cards::after {
+    content: "";
+
+    flex: 0 0 calc(50vw - 15rem);
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.testimonial-card {
+    flex: 0 0 30rem;
+
+    min-height: 32rem;
+
+    padding: 3rem 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--white);
+
+    border-radius: 1.6rem;
+
+    scroll-snap-align: center;
+
+    opacity: 0.55;
+    transform: scale(0.92);
+
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Card ativo */
+
+.testimonial-card.active {
+    opacity: 1;
+
+    transform: scale(1.04);
+
+    box-shadow:
+        0 1.8rem 3.5rem rgba(0, 0, 0, 0.25);
+
+    z-index: 2;
+}
+
+/* =========================================================
+   EMPRESA / LOGO
+   ========================================================= */
+
+.card-company {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1.8rem;
+
+    color: var(--purple);
+
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.company-logo {
+    width: auto;
+    height: 2.8rem;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   TEXTO DO DEPOIMENTO
+   ========================================================= */
+
+.card-text {
+    margin-bottom: 2.8rem;
+
+    color: var(--black);
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   AUTOR
+   ========================================================= */
+
+.card-author {
+    display: flex;
+    align-items: center;
+
+    gap: 1.2rem;
+}
+
+.author-avatar {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.author-name {
+    margin-bottom: 0.2rem;
+
+    color: var(--black);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.author-role {
+    color: var(--purple);
+
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   CONTROLES DO CARROSSEL
+   ========================================================= */
+
+.testimonials-controls {
+    display: flex;
+    align-items: center;
+
+    gap: 3rem;
+
+    margin-top: 1rem;
+}
+
+.carousel-btn {
+    min-width: 8rem;
+
+    padding: 0.8rem 1rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    background-color: transparent;
+
+    border: none;
+
+    color: var(--white);
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.carousel-btn:hover {
+    color: var(--pink);
+
+    transform: translateY(-0.2rem);
+}
+
+.carousel-btn:active {
+    transform: translateY(0);
+}
+
+.carousel-btn .arrow {
+    font-size: 1.8rem;
+}
+
+/* =========================================================
+   ACESSIBILIDADE / FOCO
+   ========================================================= */
+
+.carousel-btn:focus-visible {
+    outline: 0.2rem solid var(--white);
+    outline-offset: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .testimonials {
+        padding: 9rem 2.4rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 4.8rem;
+    }
+
+    .testimonials-subtitle {
+        font-size: 1.7rem;
+    }
+
+    .testimonials-cards {
+        gap: 2.4rem;
+    }
+
+    .testimonial-card {
+        flex-basis: 32rem;
+    }
+
+    .testimonials-cards::before,
+    .testimonials-cards::after {
+        flex-basis: calc(50vw - 16rem);
+    }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .testimonials {
+        padding: 10rem 2.4rem;
+    }
+
+    .testimonials-header {
+        max-width: 76rem;
+        margin-bottom: 5rem;
+    }
+
+    .testimonials-title {
+        font-size: clamp(4.4rem, 5vw, 6rem);
+        letter-spacing: -0.25rem;
+    }
+
+    .testimonials-subtitle {
+        max-width: 62rem;
+    }
+
+    .testimonials-cards {
+        gap: 2.8rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .testimonial-card {
+        flex-basis: 35rem;
+        min-height: 34rem;
+
+        padding: 3.2rem 2.8rem;
+    }
+
+    .testimonial-card.active {
+        transform: scale(1.06);
+    }
+
+    .testimonials-cards::before,
+    .testimonials-cards::after {
+        flex-basis: calc(50vw - 17.5rem);
+    }
+
+    .testimonials-controls {
+        gap: 4rem;
+    }
+}
+
+/* =========================================================
+   DESKTOP GRANDE
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .testimonials {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 5.5rem;
+    }
+
+    .testimonials-cards {
+        gap: 3.2rem;
+    }
+
+    .testimonial-card {
+        flex-basis: 36rem;
+        min-height: 35rem;
+    }
+
+    .testimonials-cards::before,
+    .testimonials-cards::after {
+        flex-basis: calc(50vw - 18rem);
+    }
+}
+
+/* =========================================================
+   TELAS PEQUENAS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .testimonials {
+        padding: 6rem 1.4rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 3rem;
+        padding: 0;
+    }
+
+    .testimonials-title {
+        font-size: 3.2rem;
+        letter-spacing: -0.14rem;
+    }
+
+    .testimonials-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .testimonials-cards {
+        gap: 1.6rem;
+        padding: 2.5rem 0;
+    }
+
+    .testimonial-card {
+        flex-basis: 28rem;
+        min-height: 30rem;
+
+        padding: 2.6rem 2rem;
+    }
+
+    .testimonial-card.active {
+        transform: scale(1.02);
+    }
+
+    .testimonials-cards::before,
+    .testimonials-cards::after {
+        flex-basis: calc(50vw - 14rem);
+    }
+
+    .card-text {
+        font-size: 1.4rem;
+    }
+
+    .testimonials-controls {
+        gap: 2rem;
+    }
+
+    .carousel-btn {
+        min-width: 7rem;
+        font-size: 1.4rem;
+    }
+}
+
