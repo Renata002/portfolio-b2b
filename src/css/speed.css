@@ -1,0 +1,232 @@
+
+/* =========================================================
+   SEÇÃO SPEED
+   ========================================================= */
+
+.speed {
+    width: 100%;
+    padding: 8rem 1.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speed-container {
+    width: 100%;
+    max-width: var(--max-width);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4.8rem;
+    text-align: center;
+}
+
+/* =========================================================
+   IMAGEM / MOCKUP
+   ========================================================= */
+
+.speed-image {
+    width: 100%;
+    max-width: 42rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.speed-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+}
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.speed-content {
+    width: 100%;
+    max-width: 58rem;
+}
+
+/* =========================================================
+   TAG SPEED
+   ========================================================= */
+
+.speed-tag {
+    display: inline-block;
+    margin-bottom: 1.8rem;
+
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.18rem;
+
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.speed-title {
+    margin-bottom: 2rem;
+
+    color: var(--black);
+    font-size: clamp(3.4rem, 8vw, 5.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.18rem;
+}
+
+/* =========================================================
+   DESCRIÇÃO
+   ========================================================= */
+
+.speed-description {
+    width: 100%;
+    max-width: 52rem;
+    margin: 0 auto;
+
+    color: var(--gray);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .speed {
+        padding: 9rem 2.4rem;
+    }
+
+    .speed-container {
+        gap: 5.6rem;
+    }
+
+    .speed-image {
+        max-width: 48rem;
+    }
+
+    .speed-description {
+        font-size: 1.7rem;
+    }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .speed {
+        padding: 10rem 2.4rem;
+    }
+
+    .speed-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 7rem;
+        text-align: left;
+    }
+
+    /* Texto à esquerda */
+
+    .speed-content {
+        order: 1;
+        flex: 1;
+        max-width: 52rem;
+    }
+
+    /* Imagem à direita */
+
+    .speed-image {
+        order: 2;
+        flex: 1;
+        max-width: 54rem;
+
+        justify-content: flex-end;
+    }
+
+    .speed-title {
+        font-size: clamp(4.4rem, 5vw, 6rem);
+        letter-spacing: -0.25rem;
+    }
+
+    .speed-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* =========================================================
+   DESKTOP GRANDE
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .speed {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    .speed-container {
+        gap: 10rem;
+    }
+
+    .speed-image {
+        max-width: 58rem;
+    }
+
+    .speed-title {
+        font-size: 6.2rem;
+    }
+}
+
+/* =========================================================
+   TELAS PEQUENAS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .speed {
+        padding: 6rem 1.4rem;
+    }
+
+    .speed-container {
+        gap: 3.6rem;
+    }
+
+    .speed-image {
+        max-width: 30rem;
+    }
+
+    .speed-tag {
+        font-size: 1.3rem;
+        letter-spacing: 0.14rem;
+    }
+
+    .speed-title {
+        font-size: 3.2rem;
+        letter-spacing: -0.14rem;
+    }
+
+    .speed-description {
+        font-size: 1.5rem;
+    }
+}
+
